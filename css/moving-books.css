@@ -1,0 +1,123 @@
+.moving-books-section {
+  padding: 4rem 0;
+
+  overflow: hidden;
+
+  background: var(--white);
+}
+
+.moving-books-header {
+  width: min(1400px, 92%);
+  margin: auto;
+
+  margin-bottom: 2rem;
+}
+
+.moving-books-header h2 {
+  font-family: 'Poppins', sans-serif;
+
+  font-size: 2rem;
+  font-weight: 800;
+
+  color: var(--navy);
+}
+
+.slider-wrapper {
+  width: 100%;
+
+  overflow: hidden;
+
+  position: relative;
+}
+
+.slider-track {
+  display: flex;
+  align-items: center;
+
+  gap: 1.2rem;
+
+  width: max-content;
+
+  animation: scrollBooks 30s linear infinite;
+}
+
+.slider-track:hover {
+  animation-play-state: paused;
+}
+
+@keyframes scrollBooks {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.moving-book-card {
+  width: 180px;
+
+  flex-shrink: 0;
+
+  background: var(--white);
+
+  border: 1px solid var(--border);
+  border-radius: 18px;
+
+  overflow: hidden;
+
+  transition: var(--transition);
+
+  cursor: pointer;
+
+  box-shadow: var(--shadow-sm);
+}
+
+.moving-book-card:hover {
+  transform: translateY(-6px);
+
+  box-shadow: var(--shadow-md);
+}
+
+.moving-book-image {
+  width: 100%;
+  height: 240px;
+
+  overflow: hidden;
+}
+
+.moving-book-image img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+}
+
+.moving-book-content {
+  padding: 1rem;
+}
+
+.moving-book-content h3 {
+  font-size: 1rem;
+  font-weight: 700;
+
+  color: var(--navy);
+
+  margin-bottom: 0.3rem;
+}
+
+.moving-book-content p {
+  font-size: 0.9rem;
+
+  color: var(--muted);
+
+  margin-bottom: 0.8rem;
+}
+
+.book-price {
+  font-size: 1rem;
+  font-weight: 800;
+
+  color: var(--purple);
+}

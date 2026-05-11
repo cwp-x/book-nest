@@ -1,0 +1,152 @@
+.hero {
+  width: min(1400px, 92%);
+  margin: 2rem auto;
+
+  min-height: 500px;
+
+  border-radius: 28px;
+
+  background: linear-gradient(
+    135deg,
+    #fff8f3,
+    #f5f3ff,
+    #eef2ff
+  );
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 3rem;
+
+  padding: 4rem;
+
+  overflow: hidden;
+
+  position: relative;
+}
+
+.hero::before {
+  content: "";
+
+  position: absolute;
+
+  width: 500px;
+  height: 500px;
+
+  background: rgba(124, 58, 237, 0.08);
+
+  border-radius: 50%;
+
+  top: -200px;
+  right: -150px;
+}
+
+.hero-left {
+  flex: 1;
+
+  position: relative;
+  z-index: 2;
+}
+
+.hero-left h1 {
+  font-family: 'Poppins', sans-serif;
+
+  font-size: 4rem;
+  line-height: 1.1;
+
+  color: var(--navy);
+
+  margin-bottom: 1.5rem;
+}
+
+.hero-left h1 span {
+  color: var(--orange);
+}
+
+.hero-left p {
+  max-width: 550px;
+
+  font-size: 1.05rem;
+  line-height: 1.8;
+
+  color: var(--muted);
+
+  margin-bottom: 2rem;
+}
+
+.hero-buttons {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.primary-btn {
+  padding: 1rem 1.8rem;
+
+  border-radius: 14px;
+
+  background: var(--purple);
+  color: var(--white);
+
+  font-size: 1rem;
+  font-weight: 700;
+
+  transition: var(--transition);
+}
+
+.primary-btn:hover {
+  background: #6d28d9;
+
+  transform: translateY(-2px);
+}
+
+.secondary-btn {
+  padding: 1rem 1.8rem;
+
+  border-radius: 14px;
+
+  background: var(--white);
+
+  border: 1px solid var(--border);
+
+  font-size: 1rem;
+  font-weight: 700;
+
+  color: var(--navy);
+
+  transition: var(--transition);
+}
+
+.secondary-btn:hover {
+  border-color: var(--purple);
+
+  color: var(--purple);
+}
+
+.hero-right {
+  flex: 1;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: relative;
+  z-index: 2;
+}
+
+.hero-image {
+  width: 380px;
+
+  animation: floatBooks 3s ease-in-out infinite alternate;
+}
+
+@keyframes floatBooks {
+  from {
+    transform: translateY(0px) rotate(-2deg);
+  }
+
+  to {
+    transform: translateY(-12px) rotate(2deg);
+  }
+}

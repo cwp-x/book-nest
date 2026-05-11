@@ -1,0 +1,192 @@
+/* =========================
+   LARGE TABLETS
+========================= */
+
+@media (max-width: 1200px) {
+
+  .hero {
+    padding: 3rem;
+  }
+
+  .hero-left h1 {
+    font-size: 3.2rem;
+  }
+
+  .community-grid {
+    grid-template-columns: repeat(
+      auto-fit,
+      minmax(280px, 1fr)
+    );
+  }
+}
+
+
+/* =========================
+   TABLETS
+========================= */
+
+@media (max-width: 992px) {
+
+  .navbar {
+    padding: 0 1.5rem;
+  }
+
+  .search-box {
+    display: none;
+  }
+
+  .hero {
+    flex-direction: column;
+
+    text-align: center;
+
+    padding: 3rem 2rem;
+  }
+
+  .hero-left p {
+    margin-inline: auto;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+  }
+
+  .hero-right {
+    margin-top: 2rem;
+  }
+
+  .flash-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .footer-top {
+    gap: 2rem;
+  }
+}
+
+
+/* =========================
+   MOBILE DEVICES
+========================= */
+
+@media (max-width: 768px) {
+
+  .navbar {
+    height: 65px;
+
+    padding: 0 1rem;
+  }
+
+  .logo h1 {
+    font-size: 1.5rem;
+  }
+
+  .nav-actions {
+    gap: 0.5rem;
+  }
+
+  .nav-btn {
+    padding: 0.7rem 0.9rem;
+
+    font-size: 0.85rem;
+  }
+
+  .hero {
+    margin-top: 1rem;
+
+    border-radius: 20px;
+
+    padding: 2.5rem 1.5rem;
+  }
+
+  .hero-left h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero-left p {
+    font-size: 0.95rem;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+
+    width: 100%;
+  }
+
+  .primary-btn,
+  .secondary-btn {
+    width: 100%;
+  }
+
+  .hero-image {
+    width: 260px;
+  }
+
+  .moving-book-card,
+  .book-card {
+    width: 160px;
+  }
+
+  .flash-card {
+    min-width: 220px;
+  }
+
+  .community-card {
+    padding: 1.2rem;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+
+    text-align: center;
+  }
+}
+
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 480px) {
+
+  .hero-left h1 {
+    font-size: 2rem;
+  }
+
+  .hero-left p {
+    font-size: 0.9rem;
+  }
+
+  .flash-header-left h2,
+  .community-header h2 {
+    font-size: 1.8rem;
+  }
+
+  .timer-box {
+    width: 60px;
+    height: 60px;
+  }
+
+  .timer-box h3 {
+    font-size: 1.2rem;
+  }
+
+  .book-card,
+  .moving-book-card {
+    width: 145px;
+  }
+
+  .book-card-image {
+    height: 220px;
+  }
+
+  .footer-form {
+    flex-direction: column;
+  }
+
+  .footer-form button {
+    width: 100%;
+    height: 50px;
+  }
+}

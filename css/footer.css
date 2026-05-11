@@ -1,0 +1,177 @@
+.footer {
+  background: var(--navy);
+
+  color: var(--white);
+
+  padding-top: 5rem;
+}
+
+.footer-container {
+  width: min(1400px, 92%);
+  margin: auto;
+}
+
+.footer-top {
+  display: grid;
+
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(220px, 1fr)
+  );
+
+  gap: 3rem;
+
+  padding-bottom: 3rem;
+}
+
+.footer-logo h2 {
+  font-family: 'Poppins', sans-serif;
+
+  font-size: 2rem;
+  font-weight: 800;
+
+  margin-bottom: 1rem;
+}
+
+.footer-logo span {
+  color: var(--orange);
+}
+
+.footer-logo p {
+  color: rgba(255,255,255,0.7);
+
+  line-height: 1.8;
+
+  max-width: 320px;
+}
+
+.footer-links h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+
+  margin-bottom: 1.3rem;
+}
+
+.footer-links ul {
+  display: flex;
+  flex-direction: column;
+
+  gap: 0.9rem;
+}
+
+.footer-links a {
+  color: rgba(255,255,255,0.7);
+
+  transition: var(--transition);
+}
+
+.footer-links a:hover {
+  color: var(--orange);
+
+  padding-left: 4px;
+}
+
+.footer-newsletter h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+
+  margin-bottom: 1rem;
+}
+
+.footer-newsletter p {
+  color: rgba(255,255,255,0.7);
+
+  line-height: 1.7;
+
+  margin-bottom: 1.5rem;
+}
+
+.footer-form {
+  display: flex;
+
+  background: rgba(255,255,255,0.08);
+
+  border-radius: 14px;
+
+  overflow: hidden;
+}
+
+.footer-form input {
+  flex: 1;
+
+  height: 52px;
+
+  background: transparent;
+
+  padding: 0 1rem;
+
+  border: none;
+
+  color: var(--white);
+}
+
+.footer-form input::placeholder {
+  color: rgba(255,255,255,0.45);
+}
+
+.footer-form button {
+  width: 120px;
+
+  background: var(--orange);
+
+  color: var(--white);
+
+  font-weight: 700;
+
+  transition: var(--transition);
+}
+
+.footer-form button:hover {
+  background: #ea580c;
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,0.08);
+
+  padding: 1.5rem 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 1rem;
+
+  flex-wrap: wrap;
+}
+
+.footer-bottom p {
+  color: rgba(255,255,255,0.6);
+}
+
+.footer-socials {
+  display: flex;
+  align-items: center;
+
+  gap: 1rem;
+}
+
+.footer-socials a {
+  width: 42px;
+  height: 42px;
+
+  border-radius: 50%;
+
+  background: rgba(255,255,255,0.08);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: var(--transition);
+}
+
+.footer-socials a:hover {
+  background: var(--orange);
+
+  transform: translateY(-3px);
+}
