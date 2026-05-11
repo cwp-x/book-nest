@@ -1,42 +1,54 @@
-import navbar, {
-  initNavbar
-} from "./components/navbar.js";
+import navbar from "./components/navbar.js";
 
-import hero, {
-  initHero
-} from "./components/hero.js";
+import hero from "./components/hero.js";
 
-import movingBooks, {
-  initMovingBooks
-} from "./components/movingBooks.js";
+import movingBooks from "./components/movingBooks.js";
 
-import trendingBooks, {
+import trendingBooks from "./components/trendingBooks.js";
+
+import flashDeals from "./components/flashDeals.js";
+
+import community from "./components/community.js";
+
+import footer from "./components/footer.js";
+
+import categoriesSection from "./components/categories.js";
+
+import testimonialsSection from "./components/testimonials.js";
+
+import quoteSection from "./components/quoteSection.js";
+
+
+
+import {
   initTrendingBooks
 } from "./components/trendingBooks.js";
 
-import flashDeals, {
+import {
+  initMovingBooks
+} from "./components/movingBooks.js";
+
+import {
   initFlashDeals
 } from "./components/flashDeals.js";
 
-import community, {
+import {
   initCommunity
 } from "./components/community.js";
 
-import footer, {
-  initFooter
-} from "./components/footer.js";
-
-import categoriesSection, {
+import {
   initCategories
 } from "./components/categories.js";
 
-import testimonialsSection, {
+import {
   initTestimonials
 } from "./components/testimonials.js";
 
-import quoteSection, {
+import {
   initQuoteSection
 } from "./components/quoteSection.js";
+
+
 
 import initWishlist from "./components/wishlist.js";
 
@@ -56,6 +68,8 @@ import initToast from "./components/toast.js";
 
 import initCartDrawer from "./components/cartDrawer.js";
 
+
+
 import {
   initRevealAnimations
 } from "./utils/animations.js";
@@ -66,166 +80,129 @@ import {
 
 
 // =========================
-// APP ROOT
+// WAIT FOR DOM
 // =========================
 
-const app =
-  document.getElementById(
-    "app"
-  );
-
-
-
-
-
-
-// =========================
-// RENDER APP
-// =========================
-
-const renderApp = () => {
-
-  app.innerHTML = `
-
-    ${navbar()}
-
-    <main>
-
-      ${hero()}
-
-      ${movingBooks()}
-
-      ${trendingBooks()}
-
-      ${flashDeals()}
-
-      ${categoriesSection()}
-
-      ${quoteSection()}
-
-      ${community()}
-
-      ${testimonialsSection()}
-
-    </main>
-
-    ${footer()}
-
-  `;
-
-};
-
-
-
-
-
-
-
-
-// =========================
-// INIT COMPONENTS
-// =========================
-
-const initApp = () => {
-
-  initNavbar();
-
-  initHero();
-
-  initMovingBooks();
-
-  initTrendingBooks();
-
-  initFlashDeals();
-
-  initCommunity();
-
-  initFooter();
-
-  initCategories();
-
-  initTestimonials();
-
-  initQuoteSection();
-
-
-
-
-
-
-  // =========================
-  // FEATURES
-  // =========================
-
-  initWishlist();
-
-  initMobileMenu();
-
-  initReaderMode();
-
-  initLoadingScreen();
-
-  initInfiniteSlider();
-
-  initHeroSlider();
-
-  initSearchModal();
-
-  initToast();
-
-  initCartDrawer();
-
-
-
-
-
-
-  // =========================
-  // ANIMATIONS
-  // =========================
-
-  initRevealAnimations();
-
-};
-
-
-
-
-
-
-
-
-// =========================
-// MOBILE RESIZE FIX
-// =========================
-
-window.addEventListener(
-  "resize",
+document.addEventListener(
+  "DOMContentLoaded",
   () => {
 
-    if (
-      window.innerWidth > 768
-    ) {
+    const app =
+      document.getElementById(
+        "app"
+      );
 
-      document.body.style.overflow =
-        "";
 
+
+
+
+
+    if (!app) {
+
+      console.error(
+        "#app not found"
+      );
+
+      return;
     }
+
+
+
+
+
+
+    // =========================
+    // RENDER APP
+    // =========================
+
+    app.innerHTML = `
+
+      ${navbar()}
+
+      <main>
+
+        ${hero()}
+
+        ${movingBooks()}
+
+        ${trendingBooks()}
+
+        ${flashDeals()}
+
+        ${categoriesSection()}
+
+        ${quoteSection()}
+
+        ${community()}
+
+        ${testimonialsSection()}
+
+      </main>
+
+      ${footer()}
+
+    `;
+
+
+
+
+
+
+    // =========================
+    // INIT COMPONENTS
+    // =========================
+
+    initTrendingBooks();
+
+    initMovingBooks();
+
+    initFlashDeals();
+
+    initCommunity();
+
+    initCategories();
+
+    initTestimonials();
+
+    initQuoteSection();
+
+
+
+
+
+
+    // =========================
+    // FEATURES
+    // =========================
+
+    initWishlist();
+
+    initMobileMenu();
+
+    initReaderMode();
+
+    initLoadingScreen();
+
+    initInfiniteSlider();
+
+    initHeroSlider();
+
+    initSearchModal();
+
+    initToast();
+
+    initCartDrawer();
+
+
+
+
+
+
+    // =========================
+    // ANIMATIONS
+    // =========================
+
+    initRevealAnimations();
 
   }
 );
-
-
-
-
-
-
-
-
-// =========================
-// START APP
-// =========================
-
-renderApp();
-
-initApp();
